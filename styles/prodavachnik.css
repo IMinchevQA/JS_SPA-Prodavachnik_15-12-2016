@@ -113,12 +113,19 @@ input[type=button], input[type=submit]{
     transition: all .2s ease-in-out;
 }
 
-input[type=button], input[type=submit]:hover{
+#likeBtn{
+    border: 1px solid white;
+    background: #333333;
+    border-radius: 2px;
+}
+
+input[type=button]:hover, #likeBtn:hover, input[type=submit]:hover{
     background: #00bbbb;
     border-color: #00bbbb;
     transform: scale(1.1);
     cursor: pointer;
 }
+
 
 #loadingBox {
     background: #7CB3E9;

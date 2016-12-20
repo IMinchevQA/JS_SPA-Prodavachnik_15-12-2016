@@ -9,12 +9,15 @@ const kinveyAppAuthHeaders = {
     'Authorization': "Basic " + btoa(appKey + ':' + kinveyAppSecret),
 };
 
+let userCredentials;
+
 function loginUser(event){
     event.preventDefault();
     let userLoginData = {
         username: $('#formLogin input[name=username]').val(),
         password: $('#formLogin input[name=passwd]').val(),
     };
+    userCredentials = btoa(userLoginData.username + ':' + userLoginData.password);
 
     if(userLoginData.username != ''
         && userLoginData.password != '') {
